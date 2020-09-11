@@ -11,9 +11,9 @@ function Computer:init(x, y, width, height)
 end
 
 function Computer:update(dt)
-    if ball.y < self.y then
+    if ball.y < self.y + (self.height / 2) then
         self.dy = -PADDLE_SPEED
-    elseif ball.y > self.y then
+    elseif ball.y > self.y - (self.height / 2) then
         self.dy = PADDLE_SPEED
     else
         self.dy = 0
